@@ -1,0 +1,11 @@
+RDS
+
+user=postgres
+password=12345678
+dbname=awstest
+
+Userful environment vars
+
+SPRING_DATASOURCE_URL
+SPRING_DATASOURCE_USERNAME
+SPRING_DATASOURCE_PASSWORD

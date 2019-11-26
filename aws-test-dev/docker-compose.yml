@@ -1,0 +1,17 @@
+version: '2'
+services:
+  container_postgres:
+    build: ./postgres
+    ports:
+      - "5433:5432"
+
+  container_aws_test:
+    image: aws-test:v1-dev
+    ports:
+      - "80:8585"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://container_postgres:5432/aws-test
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=1234
+    depends_on:
+      - container_postgres

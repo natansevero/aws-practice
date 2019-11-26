@@ -1,0 +1,13 @@
+{
+    "AWSEBDockerrunVersion": 1,
+    "Image": {
+      "Name": "natasevero/aws-test:v1-prod",
+      "Update": "true"
+    },
+    "Ports": [
+      {
+        "hostPort": 80,
+        "ContainerPort": 8585
+      }
+    ]
+  }
